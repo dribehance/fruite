@@ -1,7 +1,7 @@
 # fruite
 Fruite mall ,an O2O fruite store
 ## step
-vvbank is ```bower``` dependence and use ```gulp``` / ```yo``` as auto building tool ,after ```git pull```,follw the step below; 
+Fruite is ```bower``` dependence and use ```gulp``` / ```yo``` as auto building tool ,after ```git pull```,follw the step below; 
 PS: I suppose you already had node evironment install!
 ### step1
 ```
