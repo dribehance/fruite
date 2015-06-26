@@ -1,62 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
-    <title>My App</title>
+    <title>水果商城，专业的水果O2O</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
     <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
     <link rel="stylesheet" href="css/app.min.css" />
-    <link rel="stylesheet" href="css/responsive.min.css" />
     <!-- inject:js -->
     <script src="js/app.min.js"></script>
-  </head>
-  <body ng-app="MyApp" ng-controller="MainController">
+</head>
 
-    <!-- Sidebars -->
-    <div ng-include="'sidebar.html'" 
-            ui-track-as-search-param='true'
-            class="sidebar sidebar-left"></div>
+<body ng-app="Fruite">
 
     <div class="app">
 
-      <!-- Navbars -->
+        <!-- Navbars -->
 
-      <div class="navbar navbar-app navbar-absolute-top">
-        <div class="navbar-brand navbar-brand-center" ui-yield-to="title">
-          Mobile Angular UI
+        <div class="navbar navbar-app navbar-absolute-top">
+            <div class="navbar-brand navbar-brand-center" ui-yield-to="title">
+                水果商城
+            </div>
+            <div class="btn-group pull-left"></div>
+            <div class="btn-group pull-right" ui-yield-to="navbarAction"></div>
         </div>
-        <div class="btn-group pull-left">
-          <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
-            <i class="fa fa-bars"></i> Menu
-          </div>
-        </div>
-        <div class="btn-group pull-right" ui-yield-to="navbarAction">
-          <div ui-toggle="uiSidebarRight" class="btn">
-            <i class="fa fa-comment"></i> Chat
-          </div>
-        </div>
-      </div>
 
-      <div class="navbar navbar-app navbar-absolute-bottom">
-        <div class="btn-group justified">
-          <a href="http://mobileangularui.com/" class="btn btn-navbar"><i class="fa fa-home fa-navbar"></i> Docs</a>
-          <a href="https://github.com/mcasimir/mobile-angular-ui" class="btn btn-navbar"><i class="fa fa-github fa-navbar"></i> Sources</a>
-          <a href="https://github.com/mcasimir/mobile-angular-ui/issues" class="btn btn-navbar"><i class="fa fa-exclamation-circle fa-navbar"></i> Issues</a>
+        <div class="navbar navbar-app navbar-absolute-bottom footer">
+            <div class="btn-group justified">
+                <a ng-href="#/index" class="btn btn-navbar active">首页</a>
+                <a ng-href="#/category" class="btn btn-navbar">分类</a>
+                <a ng-href="#/friend" class="btn btn-navbar">圈子</a>
+                <a ng-href="#/shopping_cart" class="btn btn-navbar">购物车</a>
+                <a ng-href="#/me" class="btn btn-navbar">我</a>
+            </div>
         </div>
-      </div>
 
-      <!-- App Body -->
-      <div class="app-body">
-        <div class="app-content">
-          <ng-view></ng-view>  
+        <!-- App Body -->
+        <div class="app-body">
+            <div class="app-content">
+                <ng-view></ng-view>
+            </div>
         </div>
-      </div>
 
-    </div><!-- ~ .app -->
+    </div>
+    <!-- ~ .app -->
 
     <div ui-yield-to="modals"></div>
-  </body>
+</body>
+
 </html>

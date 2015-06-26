@@ -177,7 +177,7 @@ gulp.task('html', function() {
 ======================================================================*/
 
 gulp.task('less', function () {
-  gulp.src(['./src/less/app.less', './src/less/responsive.less'])
+  gulp.src(['./src/less/app.less'])
     .pipe(less({
       paths: [ path.resolve(__dirname, 'src/less'), path.resolve(__dirname, 'bower_components') ]
     }))
@@ -207,7 +207,7 @@ gulp.task('js', function() {
     streamqueue({ objectMode: true },
       gulp.src(config.vendor.js),
       gulp.src('./src/js/**/*.js').pipe(ngFilesort()),
-      gulp.src(['src/templates/**/*.html']).pipe(templateCache({ module: 'MyApp' }))
+      gulp.src(['src/templates/**/*.html']).pipe(templateCache({ module: 'Fruite' }))
     )
     .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
